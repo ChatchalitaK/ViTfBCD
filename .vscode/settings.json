@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./vit_breast_cancer"
+    ]
+}

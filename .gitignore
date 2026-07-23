@@ -1,0 +1,17 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.pt
+*.pth
+*.tar
+*.zip
+*.csv
+*.png
+*.jpg
+*.jpeg
+data/
+datasets/
+logs/
+checkpoints/

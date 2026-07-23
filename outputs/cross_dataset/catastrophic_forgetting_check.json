@@ -1,0 +1,17 @@
+{
+  "primary_on_breakhis_test": {
+    "accuracy": 0.8802177858439202,
+    "macro_f1": 0.8767053622284304,
+    "auc_roc": 0.9502613753278344
+  },
+  "bach_finetuned_on_breakhis_test": {
+    "accuracy": 0.661826981246219,
+    "macro_f1": 0.6210899905480297,
+    "auc_roc": 0.7220604939666606
+  },
+  "deltas": {
+    "accuracy": -0.21839080459770122,
+    "auc_roc": -0.22820088136117378,
+    "macro_f1": -0.2556153716804007
+  }
+}

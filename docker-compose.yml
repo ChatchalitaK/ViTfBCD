@@ -1,0 +1,79 @@
+version: "3.8"
+
+services:
+  # ── Binary Classification (Benign vs Malignant) ───────────────────────────
+  vitfbcd-binary:
+    build: .
+    image: vitfbcd:latest
+    container_name: vitfbcd_binary
+    tty: true            # <--- เพิ่มบรรทัดนี้ (ทำให้คอนเทนเนอร์ไม่ยอมปิดตัว)
+    stdin_open: true      # <--- เพิ่มบรรทัดนี้ (เปิดช่องรับคำสั่งค้างไว้)
+    # GPU access via NVIDIA Container Toolkit
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      # Mount your BreakHis dataset folder here
+      - ./data:/workspace/data
+      # Outputs (checkpoints, metrics, plots) saved here
+      - ./outputs:/workspace/outputs
+    command: >
+      python main.py
+        --mode binary
+        --model_size base
+        --magnification 40X
+        --epochs 30
+        --batch_size 16
+        --lr 1e-4
+        --visualize_attention
+
+  # ── Multi-class Classification (8 subtypes) ───────────────────────────────
+  vitfbcd-multiclass:
+    build: .
+    image: vitfbcd:latest
+    container_name: vitfbcd_multiclass
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - ./data:/workspace/data
+      - ./outputs:/workspace/outputs
+    command: >
+      python main.py
+        --mode multiclass
+        --model_size base
+        --magnification 40X
+        --epochs 50
+        --batch_size 16
+        --lr 1e-4
+        --visualize_attention
+
+  # ── Evaluation only (load existing checkpoint) ────────────────────────────
+  vitfbcd-eval:
+    build: .
+    image: vitfbcd:latest
+    container_name: vitfbcd_eval
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - ./data:/workspace/data
+      - ./outputs:/workspace/outputs
+    command: >
+      python main.py
+        --mode binary
+        --model_size base
+        --eval_only
+        --visualize_attention

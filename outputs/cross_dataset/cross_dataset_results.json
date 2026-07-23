@@ -1,0 +1,42 @@
+{
+  "BACH": {
+    "macenko": {
+      "n_samples": 400,
+      "accuracy": 0.58,
+      "precision": 0.6159420289855072,
+      "sensitivity": 0.425,
+      "specificity": 0.735,
+      "f1_macro": 0.5696611081226466,
+      "auc_roc": 0.6051249999999999
+    },
+    "no_stain_norm": {
+      "n_samples": 400,
+      "accuracy": 0.5675,
+      "precision": 0.5542168674698795,
+      "sensitivity": 0.69,
+      "specificity": 0.445,
+      "f1_macro": 0.5609109194855297,
+      "auc_roc": 0.5813
+    }
+  },
+  "PCam": {
+    "macenko": {
+      "n_samples": 2000,
+      "accuracy": 0.487,
+      "precision": 0.487,
+      "sensitivity": 1.0,
+      "specificity": 0.0,
+      "f1_macro": 0.32750504371217215,
+      "auc_roc": 0.5549576513723277
+    },
+    "no_stain_norm": {
+      "n_samples": 2000,
+      "accuracy": 0.487,
+      "precision": 0.487,
+      "sensitivity": 1.0,
+      "specificity": 0.0,
+      "f1_macro": 0.32750504371217215,
+      "auc_roc": 0.4657808678666779
+    }
+  }
+}

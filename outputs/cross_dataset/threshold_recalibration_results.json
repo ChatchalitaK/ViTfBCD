@@ -1,0 +1,534 @@
+[
+  {
+    "dataset": "BACH",
+    "stain": "macenko",
+    "auc_roc": 0.6051249999999999,
+    "true_positive_rate": 0.5,
+    "default_threshold_0.5": {
+      "accuracy": 0.58,
+      "macro_f1": 0.5696611081226466,
+      "predicted_positive_rate": 0.345
+    },
+    "best_threshold": {
+      "threshold": 0.45,
+      "accuracy": 0.585,
+      "macro_f1": 0.5832391855589867,
+      "predicted_positive_rate": 0.435
+    },
+    "sweep": [
+      {
+        "threshold": 0.05,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.1,
+        "accuracy": 0.4975,
+        "macro_f1": 0.332220367278798,
+        "predicted_positive_rate": 0.9975
+      },
+      {
+        "threshold": 0.15,
+        "accuracy": 0.505,
+        "macro_f1": 0.36465152098575276,
+        "predicted_positive_rate": 0.97
+      },
+      {
+        "threshold": 0.2,
+        "accuracy": 0.53,
+        "macro_f1": 0.448211088609081,
+        "predicted_positive_rate": 0.885
+      },
+      {
+        "threshold": 0.25,
+        "accuracy": 0.56,
+        "macro_f1": 0.5180590925271776,
+        "predicted_positive_rate": 0.795
+      },
+      {
+        "threshold": 0.3,
+        "accuracy": 0.565,
+        "macro_f1": 0.5478052963954365,
+        "predicted_positive_rate": 0.695
+      },
+      {
+        "threshold": 0.35,
+        "accuracy": 0.5525,
+        "macro_f1": 0.5477485330250949,
+        "predicted_positive_rate": 0.6025
+      },
+      {
+        "threshold": 0.4,
+        "accuracy": 0.575,
+        "macro_f1": 0.5749574957495749,
+        "predicted_positive_rate": 0.51
+      },
+      {
+        "threshold": 0.45,
+        "accuracy": 0.585,
+        "macro_f1": 0.5832391855589867,
+        "predicted_positive_rate": 0.435
+      },
+      {
+        "threshold": 0.5,
+        "accuracy": 0.58,
+        "macro_f1": 0.5696611081226466,
+        "predicted_positive_rate": 0.345
+      },
+      {
+        "threshold": 0.55,
+        "accuracy": 0.575,
+        "macro_f1": 0.5533837746952501,
+        "predicted_positive_rate": 0.28
+      },
+      {
+        "threshold": 0.6,
+        "accuracy": 0.575,
+        "macro_f1": 0.5344888961910239,
+        "predicted_positive_rate": 0.205
+      },
+      {
+        "threshold": 0.65,
+        "accuracy": 0.5575,
+        "macro_f1": 0.5024980500453232,
+        "predicted_positive_rate": 0.1675
+      },
+      {
+        "threshold": 0.7,
+        "accuracy": 0.5425,
+        "macro_f1": 0.46646841449281706,
+        "predicted_positive_rate": 0.1225
+      },
+      {
+        "threshold": 0.75,
+        "accuracy": 0.525,
+        "macro_f1": 0.4261725710488961,
+        "predicted_positive_rate": 0.085
+      },
+      {
+        "threshold": 0.8,
+        "accuracy": 0.515,
+        "macro_f1": 0.3952429938589108,
+        "predicted_positive_rate": 0.055
+      },
+      {
+        "threshold": 0.85,
+        "accuracy": 0.505,
+        "macro_f1": 0.36844119804790915,
+        "predicted_positive_rate": 0.035
+      },
+      {
+        "threshold": 0.9,
+        "accuracy": 0.5075,
+        "macro_f1": 0.35396597663455626,
+        "predicted_positive_rate": 0.0125
+      },
+      {
+        "threshold": 0.95,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "predicted_positive_rate": 0.0
+      }
+    ]
+  },
+  {
+    "dataset": "PCam",
+    "stain": "macenko",
+    "auc_roc": 0.5549576513723277,
+    "true_positive_rate": 0.487,
+    "default_threshold_0.5": {
+      "accuracy": 0.487,
+      "macro_f1": 0.32750504371217215,
+      "predicted_positive_rate": 1.0
+    },
+    "best_threshold": {
+      "threshold": 0.75,
+      "accuracy": 0.5205,
+      "macro_f1": 0.4867308690170896,
+      "predicted_positive_rate": 0.2565
+    },
+    "sweep": [
+      {
+        "threshold": 0.05,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.1,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.15,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.2,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.25,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.3,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.35,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.4,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.45,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.5,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.55,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.6,
+        "accuracy": 0.4875,
+        "macro_f1": 0.32858891333261936,
+        "predicted_positive_rate": 0.9995
+      },
+      {
+        "threshold": 0.65,
+        "accuracy": 0.488,
+        "macro_f1": 0.333887559699677,
+        "predicted_positive_rate": 0.994
+      },
+      {
+        "threshold": 0.7,
+        "accuracy": 0.5145,
+        "macro_f1": 0.4465027208865989,
+        "predicted_positive_rate": 0.8635
+      },
+      {
+        "threshold": 0.75,
+        "accuracy": 0.5205,
+        "macro_f1": 0.4867308690170896,
+        "predicted_positive_rate": 0.2565
+      },
+      {
+        "threshold": 0.8,
+        "accuracy": 0.513,
+        "macro_f1": 0.33997961661896087,
+        "predicted_positive_rate": 0.001
+      },
+      {
+        "threshold": 0.85,
+        "accuracy": 0.513,
+        "macro_f1": 0.33906146728354264,
+        "predicted_positive_rate": 0.0
+      },
+      {
+        "threshold": 0.9,
+        "accuracy": 0.513,
+        "macro_f1": 0.33906146728354264,
+        "predicted_positive_rate": 0.0
+      },
+      {
+        "threshold": 0.95,
+        "accuracy": 0.513,
+        "macro_f1": 0.33906146728354264,
+        "predicted_positive_rate": 0.0
+      }
+    ]
+  },
+  {
+    "dataset": "BACH",
+    "stain": "no_stain_norm",
+    "auc_roc": 0.5813,
+    "true_positive_rate": 0.5,
+    "default_threshold_0.5": {
+      "accuracy": 0.5675,
+      "macro_f1": 0.5609109194855297,
+      "predicted_positive_rate": 0.6225
+    },
+    "best_threshold": {
+      "threshold": 0.55,
+      "accuracy": 0.5875,
+      "macro_f1": 0.5850074510025842,
+      "predicted_positive_rate": 0.5775
+    },
+    "sweep": [
+      {
+        "threshold": 0.05,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.15,
+        "accuracy": 0.495,
+        "macro_f1": 0.3311036789297659,
+        "predicted_positive_rate": 0.995
+      },
+      {
+        "threshold": 0.2,
+        "accuracy": 0.5175,
+        "macro_f1": 0.38620552574040945,
+        "predicted_positive_rate": 0.9625
+      },
+      {
+        "threshold": 0.25,
+        "accuracy": 0.515,
+        "macro_f1": 0.411121903836814,
+        "predicted_positive_rate": 0.92
+      },
+      {
+        "threshold": 0.3,
+        "accuracy": 0.53,
+        "macro_f1": 0.4577600876813475,
+        "predicted_positive_rate": 0.865
+      },
+      {
+        "threshold": 0.35,
+        "accuracy": 0.535,
+        "macro_f1": 0.4873067063590507,
+        "predicted_positive_rate": 0.805
+      },
+      {
+        "threshold": 0.4,
+        "accuracy": 0.5325,
+        "macro_f1": 0.5045537340619308,
+        "predicted_positive_rate": 0.7375
+      },
+      {
+        "threshold": 0.45,
+        "accuracy": 0.5625,
+        "macro_f1": 0.5482676062700456,
+        "predicted_positive_rate": 0.6775
+      },
+      {
+        "threshold": 0.5,
+        "accuracy": 0.5675,
+        "macro_f1": 0.5609109194855297,
+        "predicted_positive_rate": 0.6225
+      },
+      {
+        "threshold": 0.55,
+        "accuracy": 0.5875,
+        "macro_f1": 0.5850074510025842,
+        "predicted_positive_rate": 0.5775
+      },
+      {
+        "threshold": 0.6,
+        "accuracy": 0.5675,
+        "macro_f1": 0.5674972968581053,
+        "predicted_positive_rate": 0.5025
+      },
+      {
+        "threshold": 0.65,
+        "accuracy": 0.5675,
+        "macro_f1": 0.5652146595542822,
+        "predicted_positive_rate": 0.4275
+      },
+      {
+        "threshold": 0.7,
+        "accuracy": 0.55,
+        "macro_f1": 0.5410036719706243,
+        "predicted_positive_rate": 0.36
+      },
+      {
+        "threshold": 0.75,
+        "accuracy": 0.535,
+        "macro_f1": 0.5078193220608082,
+        "predicted_positive_rate": 0.265
+      },
+      {
+        "threshold": 0.8,
+        "accuracy": 0.525,
+        "macro_f1": 0.4689028651292802,
+        "predicted_positive_rate": 0.175
+      },
+      {
+        "threshold": 0.85,
+        "accuracy": 0.5175,
+        "macro_f1": 0.426955366355154,
+        "predicted_positive_rate": 0.1025
+      },
+      {
+        "threshold": 0.9,
+        "accuracy": 0.505,
+        "macro_f1": 0.3721461187214612,
+        "predicted_positive_rate": 0.04
+      },
+      {
+        "threshold": 0.95,
+        "accuracy": 0.4975,
+        "macro_f1": 0.332220367278798,
+        "predicted_positive_rate": 0.0025
+      }
+    ]
+  },
+  {
+    "dataset": "PCam",
+    "stain": "no_stain_norm",
+    "auc_roc": 0.4657808678666779,
+    "true_positive_rate": 0.487,
+    "default_threshold_0.5": {
+      "accuracy": 0.487,
+      "macro_f1": 0.32750504371217215,
+      "predicted_positive_rate": 1.0
+    },
+    "best_threshold": {
+      "threshold": 0.75,
+      "accuracy": 0.478,
+      "macro_f1": 0.4517031340102664,
+      "predicted_positive_rate": 0.294
+    },
+    "sweep": [
+      {
+        "threshold": 0.05,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.1,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.15,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.2,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.25,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.3,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.35,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.4,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.45,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.5,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.55,
+        "accuracy": 0.487,
+        "macro_f1": 0.32750504371217215,
+        "predicted_positive_rate": 1.0
+      },
+      {
+        "threshold": 0.6,
+        "accuracy": 0.4875,
+        "macro_f1": 0.32858891333261936,
+        "predicted_positive_rate": 0.9995
+      },
+      {
+        "threshold": 0.65,
+        "accuracy": 0.4845,
+        "macro_f1": 0.3297532666402078,
+        "predicted_positive_rate": 0.9935
+      },
+      {
+        "threshold": 0.7,
+        "accuracy": 0.484,
+        "macro_f1": 0.3936573741134001,
+        "predicted_positive_rate": 0.899
+      },
+      {
+        "threshold": 0.75,
+        "accuracy": 0.478,
+        "macro_f1": 0.4517031340102664,
+        "predicted_positive_rate": 0.294
+      },
+      {
+        "threshold": 0.8,
+        "accuracy": 0.5115,
+        "macro_f1": 0.34113607158620646,
+        "predicted_positive_rate": 0.0045
+      },
+      {
+        "threshold": 0.85,
+        "accuracy": 0.513,
+        "macro_f1": 0.33906146728354264,
+        "predicted_positive_rate": 0.0
+      },
+      {
+        "threshold": 0.9,
+        "accuracy": 0.513,
+        "macro_f1": 0.33906146728354264,
+        "predicted_positive_rate": 0.0
+      },
+      {
+        "threshold": 0.95,
+        "accuracy": 0.513,
+        "macro_f1": 0.33906146728354264,
+        "predicted_positive_rate": 0.0
+      }
+    ]
+  }
+]

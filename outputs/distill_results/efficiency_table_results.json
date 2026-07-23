@@ -1,0 +1,23 @@
+{
+  "teacher": {
+    "params_m": 86.486274,
+    "size_mb": 1038.0,
+    "compression": 1.0,
+    "val_acc": 0.9411764705882353,
+    "latency_ms": 110.8326346800095
+  },
+  "student_fp32": {
+    "params_m": 5.597762,
+    "size_mb": 22.5,
+    "compression": 46.13333333333333,
+    "val_acc": 0.9411764705882353,
+    "latency_ms": 14.591375060008431
+  },
+  "student_int8": {
+    "params_m": 5.597762,
+    "size_mb": 6.6,
+    "compression": 157.27272727272728,
+    "val_acc": 0.9411764705882353,
+    "latency_ms": 15.156253180030035
+  }
+}

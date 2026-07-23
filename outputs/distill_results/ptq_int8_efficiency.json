@@ -1,0 +1,26 @@
+{
+  "student_name": "deit_tiny",
+  "fp32_cpu": {
+    "size_mb": 21.411046028137207,
+    "latency_ms": 12.242504220012052,
+    "test_patient_accuracy": 0.9411764705882353,
+    "n_patients": 17
+  },
+  "fp32_gpu": {
+    "size_mb": 21.411046028137207,
+    "latency_ms": 2.3716443800003617,
+    "test_patient_accuracy": 0.9411764705882353,
+    "n_patients": 17,
+    "note": "GPU-available"
+  },
+  "int8_cpu": {
+    "size_mb": 6.2547712326049805,
+    "latency_ms": 13.254566100004013,
+    "test_patient_accuracy": 0.9411764705882353,
+    "n_patients": 17,
+    "compression_vs_fp32": 3.423154138160215,
+    "speedup_vs_fp32_cpu": 0.9236442843653966,
+    "speedup_vs_fp32_gpu": 0.17893036724903758,
+    "accuracy_delta_vs_fp32": 0.0
+  }
+}

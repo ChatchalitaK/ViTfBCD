@@ -1,0 +1,38 @@
+{
+  "teacher": {
+    "test_patient_accuracy": 0.9411764705882353,
+    "n_patients": 17,
+    "sensitivity": 0.9090909090909091,
+    "specificity": 1.0,
+    "confusion_matrix": {
+      "tn": 6,
+      "fp": 0,
+      "fn": 1,
+      "tp": 10
+    }
+  },
+  "student_fp32": {
+    "test_patient_accuracy": 0.9411764705882353,
+    "n_patients": 17,
+    "sensitivity": 0.9090909090909091,
+    "specificity": 1.0,
+    "confusion_matrix": {
+      "tn": 6,
+      "fp": 0,
+      "fn": 1,
+      "tp": 10
+    }
+  },
+  "student_int8": {
+    "test_patient_accuracy": 0.9411764705882353,
+    "n_patients": 17,
+    "sensitivity": 0.9090909090909091,
+    "specificity": 1.0,
+    "confusion_matrix": {
+      "tn": 6,
+      "fp": 0,
+      "fn": 1,
+      "tp": 10
+    }
+  }
+}

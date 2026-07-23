@@ -1,0 +1,17 @@
+{
+  "student_name": "deit_tiny",
+  "teacher": {
+    "size_mb": 1038.032897,
+    "val_acc": 0.9644760213143873
+  },
+  "fp32_student": {
+    "params_m": 5.597762,
+    "size_mb": 22.451045,
+    "val_acc": 1.0
+  },
+  "int8_student": {
+    "params_m": 5.597762,
+    "size_mb": 6.558091,
+    "val_acc": 0.9289520426287744
+  }
+}

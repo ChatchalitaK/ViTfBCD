@@ -1,0 +1,28 @@
+{
+  "bach_metrics_hash": "4fdf7ab92a6309ff",
+  "frozen_at_utc": "2026-07-14T07:57:16.640510+00:00",
+  "git_commit": "unknown (not a git repo, or git unavailable)",
+  "checkpoint_path": "/home/user/Proj-Ploy/vit_breast_cancer/outputs/best_model.pt",
+  "checkpoint_file_hash": "dafcbb6de089d782",
+  "reason": null,
+  "bach": {
+    "macenko": {
+      "n_samples": 400,
+      "accuracy": 0.58,
+      "precision": 0.6159420289855072,
+      "sensitivity": 0.425,
+      "specificity": 0.735,
+      "f1_macro": 0.5696611081226466,
+      "auc_roc": 0.6051249999999999
+    },
+    "no_stain_norm": {
+      "n_samples": 400,
+      "accuracy": 0.5675,
+      "precision": 0.5542168674698795,
+      "sensitivity": 0.69,
+      "specificity": 0.445,
+      "f1_macro": 0.5609109194855297,
+      "auc_roc": 0.5813
+    }
+  }
+}

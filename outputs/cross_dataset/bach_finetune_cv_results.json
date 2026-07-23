@@ -1,0 +1,93 @@
+{
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104
+  ],
+  "runs": [
+    {
+      "seed": 100,
+      "zero_shot": {
+        "accuracy": 0.5416666666666666,
+        "macro_f1": 0.5362237369123743,
+        "auc_roc": 0.5686111111111111
+      },
+      "finetuned": {
+        "accuracy": 0.8833333333333333,
+        "macro_f1": 0.8832035595105673,
+        "auc_roc": 0.9641666666666667
+      },
+      "n_epochs_run": 15,
+      "ran_to_max_epochs": true
+    },
+    {
+      "seed": 101,
+      "zero_shot": {
+        "accuracy": 0.5583333333333333,
+        "macro_f1": 0.5492877896676351,
+        "auc_roc": 0.5555555555555556
+      },
+      "finetuned": {
+        "accuracy": 0.7583333333333333,
+        "macro_f1": 0.7473684210526317,
+        "auc_roc": 0.9375
+      },
+      "n_epochs_run": 15,
+      "ran_to_max_epochs": true
+    },
+    {
+      "seed": 102,
+      "zero_shot": {
+        "accuracy": 0.6,
+        "macro_f1": 0.594480428048437,
+        "auc_roc": 0.6347222222222223
+      },
+      "finetuned": {
+        "accuracy": 0.8916666666666667,
+        "macro_f1": 0.8910538445422167,
+        "auc_roc": 0.9597222222222221
+      },
+      "n_epochs_run": 15,
+      "ran_to_max_epochs": true
+    },
+    {
+      "seed": 103,
+      "zero_shot": {
+        "accuracy": 0.55,
+        "macro_f1": 0.5454545454545454,
+        "auc_roc": 0.5944444444444444
+      },
+      "finetuned": {
+        "accuracy": 0.85,
+        "macro_f1": 0.8493303571428572,
+        "auc_roc": 0.9549999999999998
+      },
+      "n_epochs_run": 15,
+      "ran_to_max_epochs": true
+    },
+    {
+      "seed": 104,
+      "zero_shot": {
+        "accuracy": 0.5583333333333333,
+        "macro_f1": 0.5469762803618492,
+        "auc_roc": 0.576111111111111
+      },
+      "finetuned": {
+        "accuracy": 0.8083333333333333,
+        "macro_f1": 0.8060571990724474,
+        "auc_roc": 0.9363888888888888
+      },
+      "n_epochs_run": 15,
+      "ran_to_max_epochs": true
+    }
+  ],
+  "summary": {
+    "zero_shot_auc_mean": 0.5858888888888889,
+    "zero_shot_auc_std": 0.027466814994205786,
+    "finetuned_auc_mean": 0.9505555555555555,
+    "finetuned_auc_std": 0.011490737010176378,
+    "mean_gain": 0.3646666666666666
+  }
+}

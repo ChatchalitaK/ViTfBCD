@@ -1,0 +1,15 @@
+{
+  "n_epochs": 13,
+  "metric": "val_patient_acc",
+  "best_epoch": 3,
+  "best_value": 1.0,
+  "final_epoch_value": 1.0,
+  "recent_window": 5,
+  "recent_avg_delta_per_epoch": 0.0,
+  "recent_range": 0.08333333333333337,
+  "best_epoch_is_near_end": false,
+  "n_unique_values": 2,
+  "is_coarse_metric": true,
+  "verdict": "plateaued",
+  "message": "val_patient_acc has flattened out over the last 5 epochs (avg change +0.0000/epoch, range 0.0833) -- this looks like genuine convergence around 1.0000 (epoch 3/13). Safe to treat this as the model's ceiling for this configuration. CAVEAT: this metric only took 2 distinct value(s) ([0.916667, 1.0]) across all 13 epochs -- with this few achievable levels (typical of patient-level accuracy on a small validation set), 'plateaued' or 'still improving' verdicts are not very meaningful; a single sample flipping prediction can swing the whole metric by a large step. Prefer a finer-grained companion metric (e.g. image-level val_acc, or val_loss) to judge convergence, and treat this metric as a coarse sanity check rather than the primary signal."
+}
