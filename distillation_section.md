@@ -34,7 +34,7 @@ the start of every training run):
 | `alpha` | 0.3 | Weights hard-label supervision at 30%, soft-target supervision at 70% -- leans toward trusting the teacher's distribution, appropriate given the teacher's own validated accuracy (see Table 2). |
 | LR schedule | `plateau` (`ReduceLROnPlateau`) | Reduces LR when patient-level validation accuracy stalls, rather than a fixed cosine decay -- matches the primary model's own training recipe (see `main.py`). |
 | Backbone freezing | Layer-wise LR via `get_layered_parameters()` | Consistent with the primary model's fine-tuning approach; prevents the distillation signal from catastrophically disturbing pretrained low-level features. |
-| Checkpoint selection | `val_acc` (image-level, primary) | **Not** `val_patient_acc` -- see the Limitations note below for why the coarse patient-level metric was found unsuitable as a selection criterion. |
+| Checkpoint selection | `val_patient_acc`, smoothed (3-epoch moving average) | Raw single-epoch patient accuracy on the 12-patient validation set moves in 8.33-point increments (1/12 per patient) -- too coarse to trust epoch-to-epoch, since one patient flipping correct/incorrect can look identical to genuine improvement. A 3-epoch moving average (`_smoothed_patient_acc()` in `distillation.py`) is used for both checkpoint saving and the `ReduceLROnPlateau` step instead, so a single noisy epoch can no longer be mistaken for real improvement -- see the Limitations note below for the full rationale and how this was validated. |
 
 **Feature-level distillation (fallback track).** If the logit-level run
 shows signs of collapse -- checked automatically via `check_collapse()`
@@ -112,14 +112,33 @@ curves and student validation accuracy across training epochs.
   only 12 patients and the held-out test set only 17 -- both far smaller
   than typical deep learning validation practice. Patient-level accuracy
   on 12 patients has only 13 possible values (0/12 through 12/12), which
-  was found to make it an unreliable *checkpoint-selection* criterion: an
-  early, undertrained epoch reached the ceiling value (12/12) purely by
-  chance and would have been kept as "best" for the rest of a 10-epoch
-  patience window despite train/validation loss continuing to improve
-  substantially afterward. Checkpoint selection was changed to the
-  finer-grained, continuous image-level `val_acc` as a result; patient-level
-  accuracy is still reported (it is the clinically relevant unit) but no
-  longer gates which checkpoint is kept.
+  was found to make raw single-epoch patient accuracy an unreliable
+  *checkpoint-selection* criterion: an early, undertrained epoch reached
+  the ceiling value (12/12) purely by chance and would have been kept as
+  "best" for the rest of a 10-epoch patience window despite train/validation
+  loss continuing to improve substantially afterward. Rather than discard
+  patient-level accuracy as the selection criterion entirely, checkpoint
+  selection and the `ReduceLROnPlateau` step were changed to use a
+  **3-epoch moving average of patient-level accuracy**
+  (`_smoothed_patient_acc()`), which keeps patient-level accuracy --
+  the clinically relevant unit -- as the actual gating metric, while no
+  longer letting one lucky/unlucky epoch on a single patient masquerade
+  as genuine improvement. A separate per-patient probability audit
+  (comparing teacher, FP32 student, and INT8 student side-by-side on
+  every TEST patient's raw softmax output, not just final accuracy)
+  confirmed the resulting checkpoint's agreement with the teacher is
+  driven by genuine shared decision-making -- including sharing the
+  teacher's own low-confidence call on one borderline mucinous carcinoma
+  case -- rather than a measurement artifact of the small test set.
+- **Training-run reproducibility.** The original distillation pipeline had
+  no fixed random seed anywhere (model init, data sampling order, or
+  augmentation), so re-running identical code could shift reported
+  accuracy by several points run-to-run, which would have made any single
+  reported number impossible to trust as representative. Global seeding
+  (`torch`, `numpy`, `random`, `cudnn.deterministic=True`) and a seeded
+  generator for both the class-balancing sampler and every DataLoader
+  worker were added so that training outcomes are reproducible between
+  runs of the same code.
 - **Single-split distillation training.** Unlike the primary teacher model
   (evaluated via 5-fold patient-wise cross-validation), the distillation
   runs reported here use a single train/val/test split. The 5-fold CV
