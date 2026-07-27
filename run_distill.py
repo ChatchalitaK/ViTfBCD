@@ -6,6 +6,7 @@ import torch
 from pathlib import Path
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+from matplotlib.ticker import MultipleLocator
 from PIL import Image
 from torch.utils.data import DataLoader
 
@@ -64,6 +65,7 @@ def save_performance_curves(history, save_path):
     ax1.set_ylabel('Loss Value', fontsize=11)
     ax1.grid(True, linestyle='--', alpha=0.5)
     ax1.legend(fontsize=10)
+    ax1.xaxis.set_major_locator(MultipleLocator(2))
 
     # Validation accuracy: start at 0 (epoch-0 / before-training point), then
     # jump into the real 90-100% range where patient accuracy actually lives.
@@ -130,6 +132,7 @@ def save_performance_curves(history, save_path):
     ax_top.grid(True, linestyle='--', alpha=0.5)
     ax_bot.grid(True, linestyle='--', alpha=0.5)
     ax_top.legend(fontsize=9, loc='lower right')
+    ax_bot.xaxis.set_major_locator(MultipleLocator(2))
 
     plt.suptitle('Training Performance Evaluation (Teacher: ViT -> Student: DeiT-Tiny, binary)', fontsize=14, fontweight='bold', y=1.02)
 

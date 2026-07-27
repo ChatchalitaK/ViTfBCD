@@ -36,7 +36,7 @@ ax.set_ylabel("Percentage (%)", fontsize=12, fontweight="bold")
 ax.set_title("Clinical Metrics Comparison on BreakHis Test Set\n(Patient-Level Analysis)", fontsize=14, fontweight="bold", pad=15)
 ax.set_xticks(x)
 ax.set_xticklabels(model_labels, fontsize=11, fontweight="bold")
-ax.set_ylim(0, 115) 
+ax.set_ylim(0, 135)
 ax.legend(loc="upper right", frameon=True, shadow=False)
 ax.grid(axis="y", linestyle="--", alpha=0.5)
 
